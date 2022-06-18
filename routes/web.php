@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('staff.dashboard');
 });
 
 Route::view('/register', 'content.register')->name('register');
