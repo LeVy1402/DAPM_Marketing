@@ -91,6 +91,9 @@
                                             <th class="sorting" aria-controls="tableAll"
                                                 aria-label="Sản phẩm: activate to sort column ascending">Sản phẩm
                                             </th>
+                                            <th class="sorting" aria-controls="tableAll"
+                                                aria-label="Sản phẩm: activate to sort column ascending">
+                                            </th>
                                         </tr>
                                         </thead>
                                         <tbody>

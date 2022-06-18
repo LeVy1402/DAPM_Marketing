@@ -44,7 +44,7 @@
                         <table id="tableAll" class="table table-striped dataTable" style="width: 100%;" role="grid" aria-describedby="tableAll_info">
                             <thead>
                             <tr role="row">
-                                <th class="sorting_asc" aria-controls="tableAll" aria-sort="ascending" aria-label="ID: activate to sort column descending">ID
+                                <th class="sorting_asc" aria-controls="tableAll" aria-sort="ascending" aria-label="ID: activate to sort column descending">STT
                                 </th>
                                 <th class="sorting" aria-controls="tableAll" aria-label="Tên danh mục : activate to sort column ascending">Tên trạng thái
                                 </th>

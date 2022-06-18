@@ -153,7 +153,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-without-navbar.html" class="menu-link">
+                            <a href="{{route('product')}}" class="menu-link">
                                 <div data-i18n="Without navbar">Sản phẩm</div>
                             </a>
                         </li>
@@ -246,7 +246,7 @@
                             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                data-bs-toggle="dropdown">
                                 <div class="avatar avatar-online">
-                                    <img src="{{asset('template/img/avatars/1.png')}}" alt
+                                    <img src="{{asset('template/img/avatars/1.jpg')}}" alt
                                          class="w-px-40 h-auto rounded-circle"/>
                                 </div>
                             </a>
