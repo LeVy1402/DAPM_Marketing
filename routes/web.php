@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('staff.dashboard');
 });
 
+Route::view('product', 'admin.product.product')->name('product');
+
 Route::view('/register', 'content.register')->name('register');
