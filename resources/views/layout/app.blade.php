@@ -2,10 +2,6 @@
 <html
     lang="en"
     class="light-style layout-menu-fixed"
-    dir="ltr"
-    data-theme="theme-default"
-    data-assets-path="../assets/"
-    data-template="vertical-menu-template-free"
 >
 <head>
     <meta charset="utf-8"/>
@@ -22,6 +18,9 @@
     <link rel="icon" type="image/x-icon" href="{{asset('template/img/favicon/favicon.ico')}}"/>
 
     <!-- Fonts -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -33,11 +32,13 @@
     <link rel="stylesheet" href="{{asset('template/vendor/fonts/boxicons.css')}}"/>
 
     <!-- Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="{{asset('template/vendor/css/core.css')}}" class="template-customizer-core-css"/>
     <link rel="stylesheet" href="{{asset('template/vendor/css/theme-default.css')}}"
           class="template-customizer-theme-css"/>
     <link rel="stylesheet" href="{{asset('template/css/demo.css')}}"/>
-    <link rel="stylesheet" href="{{asset('template/css/custom.css')}}"/>
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{asset('template/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}"/>
@@ -62,7 +63,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
             <div class="app-brand demo">
-                <a href="index.html" class="app-brand-link">
+                <a href="{{url('/')}}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                     width="25"
@@ -132,7 +133,7 @@
             <ul class="menu-inner py-1">
                 <!-- Dashboard -->
                 <li class="menu-item active">
-                    <a href="index.html" class="menu-link">
+                    <a href="" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Analytics">Trang chủ</div>
                     </a>
@@ -146,7 +147,7 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="layouts-without-menu.html" class="menu-link">
+                            <a href="{{route('product_category')}}" class="menu-link">
                                 <div data-i18n="Without menu">Danh mục sản phẩm</div>
                             </a>
                         </li>
@@ -156,7 +157,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-container.html" class="menu-link">
+                            <a href="{{route('product_label')}}" class="menu-link">
                                 <div data-i18n="Container">Trạng thái</div>
                             </a>
                         </li>
@@ -176,17 +177,17 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-without-navbar.html" class="menu-link">
+                            <a href="{{route('customer_field')}}" class="menu-link">
                                 <div data-i18n="Without navbar">Lĩnh vực</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-container.html" class="menu-link">
-                                <div data-i18n="Container">Nguôn khách hàng</div>
+                            <a href="{{route('customer_source')}}" class="menu-link">
+                                <div data-i18n="Container">Nguồn khách hàng</div>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-container.html" class="menu-link">
+                            <a href="{{route('customer_label')}}" class="menu-link">
                                 <div data-i18n="Container">Nhãn khách hàng</div>
                             </a>
                         </li>
@@ -206,15 +207,15 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="layouts-without-navbar.html" class="menu-link">
-                                <div data-i18n="Without navbar">Nhãn nhu cầu</div>
+                            <a href="{{route('demand_label')}}" class="menu-link">
+                                <div data-i18n="Without navbar">Trạng thái</div>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <!-- Quản lý công việc -->
                 <li class="menu-item">
-                    <a href="index.html" class="menu-link">
+                    <a href="{{url('/')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
                         <div data-i18n="Analytics">Quản lý công việc</div>
                     </a>
@@ -324,6 +325,10 @@
 <script src="{{asset('template/vendor/libs/popper/popper.js')}}"></script>
 <script src="{{asset('template/vendor/js/bootstrap.js')}}"></script>
 <script src="{{asset('template/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="{{asset('template/vendor/js/menu.js')}}"></script>
 <!-- endbuild -->
