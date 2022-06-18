@@ -4,7 +4,7 @@
         <div class="content card">
             <div class="container card-body">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-3 d-flex align-items-center justify-content-between">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-between">
                         <h4 class="box-title m-0 mb-2">Sản phẩm</h4>
                         <div class="button-block">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalAdd">
@@ -91,11 +91,11 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="{{route('product.detail')}}"><i
                                                     class="bx bx-detail me-1"></i> Xem chi tiết</a>
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="{{route('product.edit')}}"><i
                                                     class="bx bx-edit-alt me-1"></i> Sửa</a>
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="javascript:void(0);" onclick="deleteConfirm()"><i
                                                     class="bx bx-trash me-1"></i> Xóa</a>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="{{route('product.detail')}}"><i
                                                     class="bx bx-detail me-1"></i> Xem chi tiết</a>
                                             <a class="dropdown-item" href="javascript:void(0);"><i
                                                     class="bx bx-edit-alt me-1"></i> Sửa</a>
@@ -149,11 +149,11 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="{{route('product.detail')}}"><i
                                                     class="bx bx-detail me-1"></i> Xem chi tiết</a>
                                             <a class="dropdown-item" href="javascript:void(0);"><i
                                                     class="bx bx-edit-alt me-1"></i> Sửa</a>
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item"><i
                                                     class="bx bx-trash me-1"></i> Xóa</a>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i
+                                            <a class="dropdown-item" href="{{route('product.detail')}}"><i
                                                     class="bx bx-detail me-1"></i> Xem chi tiết</a>
                                             <a class="dropdown-item" href="javascript:void(0);"><i
                                                     class="bx bx-edit-alt me-1"></i> Sửa</a>
@@ -276,5 +276,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function deleteConfirm() {
+            let text = "Bạn có muốn xóa sản phẩm này?";
+            if (confirm(text) == true) {
+                alert('Bạn đã xóa sản phẩm abc.');
+            } else {
+            }
+        }
+    </script>
 
 @endsection

@@ -24,6 +24,8 @@ Route::view('/register', 'content.register')->name('register');
 Route::view('/product_category', 'admin.product.product_category')->name('product_category');
 Route::view('/product_label', 'admin.product.product_label')->name('product_label');
 Route::view('/product', 'admin.product.product')->name('product');
+Route::view('/product/detail', 'admin.product.product_detail')->name('product.detail');
+Route::view('/product/edit', 'admin.product.product_edit')->name('product.edit');
 Route::view('/product_1', 'admin.product.product_1')->name('product_1');
 //customer
 Route::view('/customer_field', 'admin.customer.customer_field')->name('customer_field');
