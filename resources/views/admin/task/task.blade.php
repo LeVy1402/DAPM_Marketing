@@ -4,19 +4,26 @@
         <div class="content card">
             <div class="container card-body">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-3 d-flex align-items-center justify-content-between">
-                        <h4 class="box-title m-0 mb-2">Khách hàng</h4>
+                    <div class="row col-8 align-items-center">
+                        <div class="col-2">
+                            <h4 class="box-title m-0 mb-2">Công việc</h4>
+                        </div>
+                        <div class="col-4">
+                            <div class="button-block">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalAdd">
+                                    <i class="fa fa-plus fa-sm"></i>
+                                    Công việc
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-4 d-flex align-items-center justify-content-end">
-                        <label class="mb-0 mr-2">Nhãn:</label>
+                        <label class="mb-0 mr-2">Nhu cầu:</label>
                         <div class="ms-2">
                             <select id="_listSelectStatus" class="form-control">
-                                <option value="">Tất cả</option>
-                                <option value="United States">VIP</option>
-                                <option value="United Kingdom">Tiềm năng</option>
-                                <option value="Afghanistan">Bạc</option>
-                                <option value="Afghanistan">Vàng</option>
-                                <option value="Afghanistan">Kim cương</option>
+                                <option value="">Nhu cầu 1</option>
+                                <option value="">Nhu cầu 1</option>
+                                <option value="">Nhu cầu 1</option>
                             </select>
                         </div>
                     </div>
@@ -51,14 +58,18 @@
                             <tr role="row">
                                 <th class="sorting_asc">STT
                                 </th>
-                                <th class="sorting">Khách hàng
+                                <th class="sorting">Công việc
                                 </th>
                                 </th>
-                                <th class="sorting" >Số điện thoại
+                                <th class="sorting" >Mô tả
                                 </th>
-                                <th class="text-nowrap sorting" >Email
+                                <th class="sorting">Ngày kết thúc
                                 </th>
-                                <th class="sorting">Website
+                                <th class="sorting">Trạng thái
+                                </th>
+                                <th class="sorting">Độ ưu tiên
+                                </th>
+                                <th class="sorting">Phân loại
                                 </th>
                                 <th class="sorting">
                                 </th>
@@ -67,10 +78,12 @@
                             <tbody>
                             <tr role="row" class="odd">
                                 <td class="sorting_1">1</td>
-                                <td>Nguyễn Văn A</td>
-                                <td>0325625211</td>
-                                <td>nva@gmail.com</td>
-                                <td>https://www.bigcity.vn/</td>
+                                <td>Công việc 1</td>
+                                <td>Mô tả 1</td>
+                                <td>18/12/2022/</td>
+                                <td><span class="badge bg-label-primary me-1">Đang thực hiện</span></td>
+                                <td>Cao</td>
+                                <td>Nội bộ</td>
                                 <td style="width: 25px">
                                     <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
@@ -130,12 +143,12 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><strong>Sản phẩm</strong></h5>
+                    <h5 class="modal-title"><strong>Công việc</strong></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-2">
-                        <label>Tên sản phẩm</label>
+                        <label>Tên công việc</label>
                         <input id="txtname" class="form-control" placeholder=" " aria-label="Nhãn dán" type="text">
                     </div>
                     <div class="mb-2">
@@ -143,29 +156,31 @@
                         <textarea id="txtdesc" class="form-control" aria-label="nhập label" rows="3"></textarea>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <label>Giá bán</label>
-                            <input id="txtname" class="form-control" placeholder=" " aria-label="Nhãn dán" type="text">
+                        <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Ngày bắt đầu</label>
+                            <input class="form-control" type="date" id="birthday" name="birthday">
                         </div>
-                        <div class="col">
-                            <label>Giá sale</label>
-                            <input id="txtname" class="form-control" placeholder=" " aria-label="Nhãn dán" type="text">
+                        <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">Ngày kết thúc</label>
+                            <input class="form-control" type="date" id="birthday" name="birthday">
                         </div>
                     </div>
-                    <div class="mb-2">
-                        <label>Danh mục</label>
-                        <select id="timeZones" class="select2 form-select">
-                            <option value="">Mobile</option>
-                            <option value="-12">Website</option>
-                            <option value="-12">Phần mềm</option>
-                        </select>
-                    </div>
-                    <div class="mb-2">
-                        <label>Trạng thái</label>
-                        <select id="timeZones" class="select2 form-select">
-                            <option value="">Đang bán</option>
-                            <option value="-12">Đã bán</option>
-                        </select>
+                    <div class="row">
+                        <div class="mb-2">
+                            <label>Độ ưu tiên</label>
+                            <select id="timeZones" class="select2 form-select">
+                                <option value="">Thấp</option>
+                                <option value="-12">Vừa</option>
+                                <option value="-12">Cao</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label>Phân loại</label>
+                            <select id="timeZones" class="select2 form-select">
+                                <option value="">Khách hàng</option>
+                                <option value="-12">Nội bộ</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="mt-3 text-center">
                         <button type="button" id="btnsave" class="btn btn-primary" data-id="0"><i class="ti-save"></i>&nbsp;Thêm</button>

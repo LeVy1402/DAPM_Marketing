@@ -173,8 +173,13 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="layouts-without-menu.html" class="menu-link">
+                            <a href="{{route('customer')}}" class="menu-link">
                                 <div data-i18n="Without menu">Danh sách khách hàng</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{route('customer_add')}}" class="menu-link">
+                                <div data-i18n="Without menu">Thêm khách hàng</div>
                             </a>
                         </li>
                         <li class="menu-item">
@@ -203,7 +208,7 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="layouts-without-menu.html" class="menu-link">
+                            <a href="{{route('demand')}}" class="menu-link">
                                 <div data-i18n="Without menu">Nhu cầu</div>
                             </a>
                         </li>
@@ -216,7 +221,7 @@
                 </li>
                 <!-- Quản lý công việc -->
                 <li class="menu-item">
-                    <a href="{{url('/')}}" class="menu-link">
+                    <a href="{{url('task')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-detail"></i>
                         <div data-i18n="Analytics">Quản lý công việc</div>
                     </a>
@@ -261,7 +266,7 @@
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
-                                                <span class="fw-semibold d-block">John Doe</span>
+                                                <span class="fw-semibold d-block">Ngọc Hân</span>
                                                 <small class="text-muted">Admin</small>
                                             </div>
                                         </div>
@@ -273,22 +278,13 @@
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <i class="bx bx-user me-2"></i>
-                                        <span class="align-middle">My Profile</span>
+                                        <span class="align-middle">Thông tin cá nhân</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <i class="bx bx-cog me-2"></i>
-                                        <span class="align-middle">Settings</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
+                                        <span class="align-middle">Cài đặt</span>
                                     </a>
                                 </li>
                                 <li>
@@ -297,7 +293,7 @@
                                 <li>
                                     <a class="dropdown-item" href="auth-login-basic.html">
                                         <i class="bx bx-power-off me-2"></i>
-                                        <span class="align-middle">Log Out</span>
+                                        <span class="align-middle">Đăng xuất</span>
                                     </a>
                                 </li>
                             </ul>

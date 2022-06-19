@@ -31,6 +31,13 @@ Route::view('/product_1', 'admin.product.product_1')->name('product_1');
 Route::view('/customer_field', 'admin.customer.customer_field')->name('customer_field');
 Route::view('/customer_source', 'admin.customer.customer_source')->name('customer_source');
 Route::view('/customer_label', 'admin.customer.customer_label')->name('customer_label');
+Route::view('/customer_add', 'admin.customer.customer_add')->name('customer_add');
 Route::view('/customer', 'admin.customer.customer')->name('customer');
 //demand
 Route::view('/demand_label', 'admin.demand.demand_label')->name('demand_label');
+Route::view('/demand', 'admin.demand.demand')->name('demand');
+//task
+Route::view('/task', 'admin.task.task')->name('task');
+//backend
+Route::get('/admin', [\App\Http\Controllers\AdminCotroller::class, 'index']);
+Route::get('/dashboard', [\App\Http\Controllers\AdminCotroller::class, 'show_dashboard']);
